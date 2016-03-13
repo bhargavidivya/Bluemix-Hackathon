@@ -17,8 +17,11 @@ Template.addCattle.events({
     var farmer = Session.get('currentUser');
     var cattleSize = farmer.cattle.length;
     famer.cattle[cattleSize+1] = cattleJson;
-    Session.set('currentUser',farmer);
-      
+    
+    
+    //TODO: make another call to determine next vaccination details and update farmer
+    Session.set('currentUser', farmer);
+     
 	Meteor.call('addCattletoDB', farmer,farmer._id, function(error, result) {
 		if(result) {
 			Router.go('cattleHome');
