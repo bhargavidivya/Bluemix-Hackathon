@@ -1,0 +1,58 @@
+<template name="cattleHome">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Manage Cattle</h4>
+			</div>		
+		</div>	
+		
+<form name="cattle-home" class="pp-cash-form">
+<div class="list list-inset">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">RFID</span>
+    <input name="rfid" type="text" placeholder="12345">
+  </label>
+ </div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" data-action="searchCattle">
+					  Search
+					</button>
+				</div>
+			</div>					
+</form>		
+
+<div class="pp-home-icons-container">
+		<div class="row pp-icon-row">
+			<div class="col pp-icon">
+				{{#linkTo route="addCattle" class="pp-icon-link"}}	
+				<img src="/images/icon-pay.png?r201509262221" />
+				<br/>
+				<span class="text">Add Cattle</span>  
+				{{/linkTo}}				
+			</div>			
+		</div>  
+    </div>
+		
+		
+		
+		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>
