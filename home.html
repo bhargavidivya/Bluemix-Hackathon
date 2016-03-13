@@ -1,0 +1,56 @@
+<template name="home">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-home-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Home</h4>
+			</div>		
+		</div>
+		
+		<div class="list list-inset">
+		  <div class="item">
+			<p id="pp-home-info">
+				Welcome {{name}}
+			</p>
+		  </div>
+		</div>
+
+      <div class="list list-inset">
+		  <div class="item">
+			<p id="pp-home-info">
+				Notifications
+			</p>
+		  </div>
+		</div>
+      {{#each notifications}}
+  		{{notification}}
+	  {{/each}}
+	  
+	  <div class="list list-inset">
+		  <div class="item">
+			<p id="pp-home-info">
+				Current Stocks
+			</p>
+		  </div>
+		</div>
+      {{#each stocks}}
+  		{{stockName}}&nbsp; : {{stockQuantity}}
+	  {{/each}}
+	  
+	  
+     	<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>
