@@ -1,4 +1,4 @@
-Template.nametag.helpers({
+Template.home.helpers({
   name: function()
   {
 	  var farmer = Session.get('currentUser');
