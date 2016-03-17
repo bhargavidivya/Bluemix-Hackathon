@@ -1,0 +1,50 @@
+<template name="cropsHome">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Crop Details</h4>
+			</div>		
+		</div>	
+		
+<form name="crops-home" class="pp-cash-form">
+	<ul class="list">
+	{{#each crops}}
+	  <li class="item" name="cropDetail">
+	{{#linkTo route="updateCrop" class="pp-icon-link" 				id=cropName}}	
+	   {{cropName}} : {{cropYield}} Quintals 
+	 {{/linkTo}}
+	  </li>
+	{{/each}}
+	</ul>
+	
+</form>		
+
+<div class="pp-home-icons-container">
+		<div class="row pp-icon-row">
+			<div class="col pp-icon">
+				{{#linkTo route="addCrop" class="pp-icon-link"}}	
+				<img src="/images/icon-pay.png?r201509262221" />
+				<br/>
+				<span class="text">Add Crop</span>  
+				{{/linkTo}}				
+			</div>			
+		</div>  
+    </div>
+		
+		<div class="row">
+			<div class="col">&nbsp;</div> 
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

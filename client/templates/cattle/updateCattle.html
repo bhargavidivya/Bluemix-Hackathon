@@ -1,0 +1,79 @@
+<template name="updateCattle">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Update Cattle</h4>
+			</div>		
+		</div>	
+		
+<form name="update-cattle" class="pp-cash-form">
+<div class="list list-inset">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Pet Name</span>
+    {{petName}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">RFID</span>
+    {{rfid}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Date of Birth</span>
+    {{dob}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Gender</span>
+    {{gender}}
+  </label> 	
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">V.Doctor ID</span>
+    {{vid}}
+  </label>	
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Previous Vaccination</span>
+    <input name="previousVacciName" type="text" value={{previousVacciNameOld}}>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Previous Vaccination Date</span>
+    <input name="previousVacciDate" type="date" value={{previousVacciDateOld}}>
+  </label>
+  	<label class="item item-input item-stacked-label">
+    <span class="input-label">Next Vaccination</span>
+    {{nextVacciNameOld}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Next Vaccination Date</span>
+    {{nextVacciDateOld}} 
+  </label>
+
+  </div>
+			 	 
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" id="updateCattle">
+					  Update
+					</button>
+				</div>
+			</div>					
+</form>		
+		 
+		
+		
+		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

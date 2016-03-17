@@ -1,0 +1,59 @@
+<template name="addCattle">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Add Cattle</h4>
+			</div>		
+		</div>	
+		
+<form name="add-cattle" class="pp-cash-form">
+<div class="list list-inset">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Pet Name</span>
+    <input name="petname" type="text" placeholder="Ganga">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">RFID</span>
+    <input name="rfid" type="text" placeholder="123">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Date of Birth</span>
+    <input name="dob" type="text" placeholder="dd/mm/yyyy">
+  </label>
+  
+    <p class="input-label">Gender</p>
+    <input name="gender" type="radio" value="male">Male &nbsp;&nbsp;&nbsp;
+    <input name="gender" type="radio" value="female">Female
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">V.Doctor ID</span>
+    <input name="vid" type="text" placeholder="12345">
+  </label>	
+   </div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" id="insertCattle">
+					  Go
+					</button>
+				</div>
+			</div>					
+</form>		
+			
+
+		<div class="row">
+			<div class="col">&nbsp;</div> 
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

@@ -1,0 +1,56 @@
+<template name="login">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-login-container"> 	
+		<div class="row pp-login-text">
+			<div class="col">
+				<h4>Welcome to Passion Agriclture Insurance</h4>
+			</div>		
+		</div>
+		
+		<form name="pp-login-form" class="pp-login-form">
+			<div class="list list-inset">		
+		
+			<p class="input-label">You are a: </p>
+			
+	<input type="radio" name="role" id="role" value="farmer">Farmer &nbsp;
+				<input type="radio" id="role" name="role" value="vdoctor">Veterinary Doctor
+
+			  <label class="item item-input">
+				<span class="input-label">
+					Enter User ID:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+					&nbsp;
+				</span>
+				<input type="text" placeholder="User ID" name="userId">
+			  </label>
+			  <label class="item item-input">
+				<span class="input-label">Enter Password:</span>
+				<input type="password" placeholder="Password" name="password">
+			  </label>
+			</div>
+			<div class="row pp-cash-text">
+				<div class="col">
+					{{#linkTo route="home" class="pp-login-link"}}
+					<button id="login" class="button pp-login-button">
+					  Login
+					</button>
+					{{/linkTo}}
+	
+				</div>
+			</div>		
+			
+		</form>
+	
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabs}}
+    
+  {{/ionView}}
+</template>

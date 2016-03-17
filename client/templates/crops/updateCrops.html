@@ -1,0 +1,58 @@
+<template name="updateCrop">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Update Crop</h4>
+			</div>		
+		</div>	
+		
+<form name="update-cattle" class="pp-cash-form">
+<div class="list list-inset">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Crop Name</span>
+    {{cropName}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Area of Farm</span>
+    {{area}}&nbsp;Hectares
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Address</span>
+    {{address}}
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Yield (In Quintal)</span>
+    <input name="yield" type="text" value="{{yieldOld}}" >
+  </label> 	
+  </div>
+			
+			<div class="row pp-cash-text">
+				<div class="col">
+					<button class="button pp-cash-button" data-action="updateCrop" id="update">
+					  Update
+					</button>
+				</div>
+			</div>					
+</form>		
+		
+		
+		
+		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

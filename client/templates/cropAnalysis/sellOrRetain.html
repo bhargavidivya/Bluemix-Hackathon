@@ -1,0 +1,39 @@
+<template name="SellOrRetain">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Insured Crop Analysis</h4>
+			</div>		
+		</div>	
+		
+<form name="sell-or-retain" class="pp-cash-form">
+	<div class="list">
+		{{#each crops}}
+	    <a class="item item-thumbnail-left" href="#">
+	      <img src={{cropImage}}>
+	      <h2>{{cropName}}</h2>
+	      <p>Today's Price:&nbsp;{{todaysPrice}} </p>
+	      <p>Predicted Price in 5 days:&nbsp;{{predictedPrice}} </p>
+	      <p>Recommendation:&nbsp;{{recommendation}} </p>
+	    </a>
+	    {{/each}}
+	</div>
+</form>		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>
