@@ -1,0 +1,45 @@
+<template name="assetMonitor">
+
+  {{> ppHeader}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		
+	<div class="pp-inbranch-container"> 	
+		<div class="row pp-home-text">
+			<div class="col">
+				<h4>Monitor Asset</h4>
+			</div>		
+		</div>	
+		
+<form name="asset-monitor" class="pp-cash-form">
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input name="rfid" type="text" placeholder="Search RFID">
+    <button class="button pp-cash-button" data-action="identifyAsset" id = "identifyAsset">
+	Go
+	</button>
+  </label>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+    {{output}}
+  </div>
+</div>
+
+</form>		
+
+		<div class="row">
+			<div class="col">&nbsp;</div>
+		</div>
+		
+	</div>	
+    {{/ionContent}}  
+    
+    {{> _tabsIn}}
+    
+  {{/ionView}}
+</template>

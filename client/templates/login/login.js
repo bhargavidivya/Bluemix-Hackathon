@@ -16,7 +16,7 @@ Template.login.events({
   	var userId = $("input[name='userId']").val();
   	var password = $("input[name='password']").val();
     console.log("role"+role+"name "+userId);
-	/*Session.set('currentUser',userId);*/
+	Session.set('currentUser',userId);
 	//TODO: authentication
     if(role == 'farmer')
     {

@@ -8,6 +8,28 @@ Template.home.helpers({
   notifications: function()
   {
 	var farmer = Session.get('loggedInFarmer');
-	return farmer.notifications; 
+	console.log("farmer"+JSON.stringify(farmer));
+	var notifications = new Array();
+	var j=0;
+	for(i=0;i<farmer.crops.length;i++)
+	{
+      	if(farmer.crops[i].notification)
+        	{
+			notifications[j] = farmer.crops[i].notification;
+  			j++;
+        	}
+      }
+      for(i=0;i<farmer.cattleDetails.length;i++)
+	{
+        if(farmer.cattleDetails[i].notification)
+        {
+
+		notifications[j] = farmer.cattleDetails[i].notification;
+		j++;
+	   }
+   		
+      }
+      console.log("notifications"+notifications);
+	return notifications; 
   }
 });

@@ -12,15 +12,15 @@
 			</div>		
 		</div>	
 		
-<form name="sell-or-retain" class="pp-cash-form">
+<form name="SellOrRetain" class="pp-cash-form">
 	<div class="list">
 		{{#each crops}}
 	    <a class="item item-thumbnail-left" href="#">
-	      <img src={{cropImage}}>
+	      <img src="{{cropName}}.png">
 	      <h2>{{cropName}}</h2>
-	      <p>Today's Price:&nbsp;{{todaysPrice}} </p>
+	      <p>Today's Price:&nbsp;{{currentPrice}} </p>
 	      <p>Predicted Price in 5 days:&nbsp;{{predictedPrice}} </p>
-	      <p>Recommendation:&nbsp;{{recommendation}} </p>
+	      <p>Recommendation:&nbsp;{{action}} </p>
 	    </a>
 	    {{/each}}
 	</div>

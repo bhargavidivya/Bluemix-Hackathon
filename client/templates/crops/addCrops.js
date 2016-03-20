@@ -34,7 +34,7 @@ Template.addCrop.events({
   	
   	var crop = $("#changeCrop").val();
   	var area = $("input[name='area']").val();
-  	var yield = $("input[name='yield']").val();
+  	var yields = $("input[name='yield']").val();
   	var state = $("#changeState").val();
   	var district = $("#changeDistrict").val();
   	var block = $("#changeBlock").val();
@@ -42,12 +42,12 @@ Template.addCrop.events({
   	var pincode = $("input[name='pincode']").val();
   	
   	console.log('cropName'+crop);
-  	console.log('yield'+yield);
+  	console.log('yield'+yields);
     var cropDetail = {
     	cropName: crop,
     	area: area,
         address: village+','+block+','+district+','+state+'-'+pincode,
-        cropYield: yield,
+        cropYield: yields,
     };
     
     var farmer = Session.get('loggedInFarmer');
